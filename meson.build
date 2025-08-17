@@ -29,6 +29,10 @@ tsrm_sources = [
     'tsrm_demo.cpp'
 ]
 
+order_demo_sources = [
+    'transform_order_demo.cpp'
+]
+
 # 创建可执行文件
 Renderer = executable('Renderer', 
     sources,
@@ -38,5 +42,11 @@ Renderer = executable('Renderer',
 # TSRM 矩阵学习 Demo
 TSRM_Demo = executable('TSRM_Demo', 
     tsrm_sources,
+    dependencies : [opengl_dep, glfw_dep, glm_dep],
+    install : true)
+
+# 变换顺序对比 Demo
+Transform_Order_Demo = executable('Transform_Order_Demo', 
+    order_demo_sources,
     dependencies : [opengl_dep, glfw_dep, glm_dep],
     install : true)
