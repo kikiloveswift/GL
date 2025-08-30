@@ -1,0 +1,1 @@
+. "/Users/liqiang/code/github/Renderer/build/Release/generators/deactivate_conanbuildenv-release-armv8.sh"
