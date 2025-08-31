@@ -19,10 +19,8 @@ function(link_renderer_libs target)
     )
 endfunction()
 
-add_executable(Renderer main.cpp
-        GettingStarted/opengl_01.cpp)
-
 add_executable(opengl_01 GettingStarted/opengl_01.cpp)
+add_executable(opengl_02 GettingStarted/opengl_02.cpp)
 
-link_renderer_libs(Renderer)
 link_renderer_libs(opengl_01)
+link_renderer_libs(opengl_02)

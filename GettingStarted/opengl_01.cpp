@@ -35,6 +35,12 @@ int HEIGHT = 600;
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
+void processInput(GLFWwindow* window) {
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
+        glfwSetWindowShouldClose(window, true);
+    }
+}
+
 int main(int argc, char *argv[]) {
     if (InitGlfw() == -1) {
         return -1;
@@ -62,6 +68,7 @@ int main(int argc, char *argv[]) {
 
     // 开启 runloop 循环
     while (!glfwWindowShouldClose(window)) {
+        processInput(window);
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
