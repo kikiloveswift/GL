@@ -12,7 +12,7 @@ set(opengl_system_FIND_MODE "NO_MODULE")
 
 ########### VARIABLES #######################################################################
 #############################################################################################
-set(glfw_PACKAGE_FOLDER_RELEASE "/Users/liqiang/.conan2/p/b/glfw38df99e81ec1a/p")
+set(glfw_PACKAGE_FOLDER_RELEASE "/Users/liqiang/.conan2/p/b/glfw1bd2c912575e4/p")
 set(glfw_BUILD_MODULES_PATHS_RELEASE )
 
 

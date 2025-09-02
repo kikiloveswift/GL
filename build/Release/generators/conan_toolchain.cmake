@@ -158,9 +158,9 @@ list(PREPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR})
 # Definition of CMAKE_PREFIX_PATH, CMAKE_XXXXX_PATH
 # The Conan local "generators" folder, where this toolchain is saved.
 list(PREPEND CMAKE_PREFIX_PATH ${CMAKE_CURRENT_LIST_DIR} )
-list(PREPEND CMAKE_LIBRARY_PATH "/Users/liqiang/.conan2/p/b/glfw38df99e81ec1a/p/lib" "/Users/liqiang/.conan2/p/b/glad96187aeb77855/p/lib")
-list(PREPEND CMAKE_INCLUDE_PATH "/Users/liqiang/.conan2/p/b/glfw38df99e81ec1a/p/include" "/Users/liqiang/.conan2/p/glmc7261f667dea4/p/include" "/Users/liqiang/.conan2/p/b/glad96187aeb77855/p/include")
-set(CONAN_RUNTIME_LIB_DIRS "/Users/liqiang/.conan2/p/b/glfw38df99e81ec1a/p/lib" "/Users/liqiang/.conan2/p/b/glad96187aeb77855/p/lib" )
+list(PREPEND CMAKE_LIBRARY_PATH "/Users/liqiang/.conan2/p/b/spdlob90fe95d34398/p/lib" "/Users/liqiang/.conan2/p/b/fmt42a58e9adb5f1/p/lib" "/Users/liqiang/.conan2/p/b/glfw1bd2c912575e4/p/lib" "/Users/liqiang/.conan2/p/b/gladeb217b17598c5/p/lib")
+list(PREPEND CMAKE_INCLUDE_PATH "/Users/liqiang/.conan2/p/b/spdlob90fe95d34398/p/include" "/Users/liqiang/.conan2/p/b/fmt42a58e9adb5f1/p/include" "/Users/liqiang/.conan2/p/b/glfw1bd2c912575e4/p/include" "/Users/liqiang/.conan2/p/glmc7261f667dea4/p/include" "/Users/liqiang/.conan2/p/b/gladeb217b17598c5/p/include")
+set(CONAN_RUNTIME_LIB_DIRS "/Users/liqiang/.conan2/p/b/spdlob90fe95d34398/p/lib" "/Users/liqiang/.conan2/p/b/fmt42a58e9adb5f1/p/lib" "/Users/liqiang/.conan2/p/b/glfw1bd2c912575e4/p/lib" "/Users/liqiang/.conan2/p/b/gladeb217b17598c5/p/lib" )
 
 endif()
 

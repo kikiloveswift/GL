@@ -11,7 +11,7 @@ endif()
 
 ########### VARIABLES #######################################################################
 #############################################################################################
-set(glad_PACKAGE_FOLDER_RELEASE "/Users/liqiang/.conan2/p/b/glad96187aeb77855/p")
+set(glad_PACKAGE_FOLDER_RELEASE "/Users/liqiang/.conan2/p/b/gladeb217b17598c5/p")
 set(glad_BUILD_MODULES_PATHS_RELEASE )
 
 
