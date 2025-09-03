@@ -22,8 +22,8 @@ float vertices[] = {
 };
 
 unsigned int indices[] = {
-    0, 1, 3,   // 第一个三角形
-    1, 2, 3    // 第二个三角形
+    0, 1, 3,   // first triangle
+    1, 2, 3    // second triangle
 };
 
 void FrameCallback(GLFWwindow* window, int width, int height);
@@ -114,7 +114,7 @@ int main(int argc, char *argv[]) {
     shader.setInt("ourTexture", 0);
     shader.setBool("flipY", true);
 
-    // 渲染循环
+    // rend loop
     while (!glfwWindowShouldClose(window)) {
         processInput(window);
         
@@ -137,7 +137,7 @@ int main(int argc, char *argv[]) {
         glfwPollEvents();
     }
     
-    // 清理资源
+    // clear resource
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
     glDeleteBuffers(1, &EBO);

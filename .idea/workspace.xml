@@ -30,28 +30,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="939d1074-ef3f-4adc-8a9f-a03fac7d5ae1" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/GettingStarted/opengl_03/ImageLoader.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GettingStarted/opengl_03/ImageLoader.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GettingStarted/opengl_03/opengl_03.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GettingStarted/opengl_03/opengl_03.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GettingStarted/opengl_03/opengl_03.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/jinx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utils/Logger.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utils/Logger.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/stb_image.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GettingStarted/opengl_01.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GettingStarted/opengl_01/opengl_01.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GettingStarted/opengl_02.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GettingStarted/opengl_02/opengl_02.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GettingStarted/opengl_02.frag" beforeDir="false" afterPath="$PROJECT_DIR$/GettingStarted/opengl_02/opengl_02.frag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GettingStarted/opengl_02.vert" beforeDir="false" afterPath="$PROJECT_DIR$/GettingStarted/opengl_02/opengl_02.vert" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Release/generators/conan_toolchain.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/Release/generators/conan_toolchain.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Release/generators/conandeps_legacy.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/Release/generators/conandeps_legacy.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Release/generators/glad-release-armv8-data.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/Release/generators/glad-release-armv8-data.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Release/generators/glfw3-release-armv8-data.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/Release/generators/glfw3-release-armv8-data.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conandata.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conandata.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shader/Shader.h" beforeDir="false" afterPath="$PROJECT_DIR$/shader/Shader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GettingStarted/opengl_03/opengl_03.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GettingStarted/opengl_03/opengl_03.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +173,7 @@
       <workItem from="1756545773702" duration="20593000" />
       <workItem from="1756629312238" duration="16566000" />
       <workItem from="1756723334558" duration="11064000" />
-      <workItem from="1756806850269" duration="9850000" />
+      <workItem from="1756806850269" duration="11200000" />
     </task>
     <servers />
   </component>
