@@ -4,11 +4,11 @@
 /*
  * Target: use openGL render an image, maybe Jinx?
  ***/
-#include "../../Utils/Logger.h"
+#include "Utils/Logger.h"
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
-#include "../../shader/Shader.h"
-#include "ImageLoader.h"
+#include "shader/Shader.h"
+#include "Utils/ImageLoader.h"
 
 int SCREEN_WINDTH = 800;
 int SCREEN_HEIGHT = 600;
@@ -64,7 +64,8 @@ int main(int argc, char *argv[]) {
     }
 
     // Init Shader
-    Shader shader("../GettingStarted/opengl_03/opengl_03.vert", "../GettingStarted/opengl_03/opengl_03.frag");
+    Shader shader("../GettingStarted/opengl_03/opengl_03.vert",
+        "../GettingStarted/opengl_03/opengl_03.frag");
     
     // generate VAO VBO EBO
     unsigned int VAO, VBO, EBO;
@@ -72,7 +73,7 @@ int main(int argc, char *argv[]) {
     glGenBuffers(1, &VBO);
     glGenBuffers(1, &EBO);
     
-    // VAO
+    // VAO - Tell OpenGL, since now, I'll use VAO to manage vertex resources.
     glBindVertexArray(VAO);
     
     // VBO

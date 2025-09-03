@@ -18,6 +18,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
+      <config projectName="Renderer" targetName="opengl_04" />
       <config projectName="Renderer" targetName="opengl_03" />
       <config projectName="Renderer" targetName="opengl_02" />
       <config projectName="Renderer" targetName="opengl_01" />
@@ -30,7 +31,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="939d1074-ef3f-4adc-8a9f-a03fac7d5ae1" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/GettingStarted/opengl_04/opengl_04.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GettingStarted/opengl_03/ImageLoader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/ImageLoader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GettingStarted/opengl_03/ImageLoader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/ImageLoader.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GettingStarted/opengl_03/opengl_03.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GettingStarted/opengl_03/opengl_03.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +60,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -84,6 +91,7 @@
     "CMake 应用程序.opengl_01.executor": "Run",
     "CMake 应用程序.opengl_02.executor": "Run",
     "CMake 应用程序.opengl_03.executor": "Run",
+    "CMake 应用程序.opengl_04.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -114,11 +122,12 @@
       <recent name="$PROJECT_DIR$/third_party" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Utils" />
       <recent name="$PROJECT_DIR$/GettingStarted/opengl_01" />
       <recent name="$PROJECT_DIR$/GettingStarted/opengl_02" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake 应用程序.opengl_03">
+  <component name="RunManager" selected="CMake 应用程序.opengl_04">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -135,6 +144,11 @@
       </method>
     </configuration>
     <configuration name="opengl_03" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Renderer" TARGET_NAME="opengl_03" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Renderer" RUN_TARGET_NAME="opengl_03">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="opengl_04" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Renderer" TARGET_NAME="opengl_04" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Renderer" RUN_TARGET_NAME="opengl_04">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -159,6 +173,7 @@
       <item itemvalue="CMake 应用程序.opengl_01" />
       <item itemvalue="CMake 应用程序.opengl_02" />
       <item itemvalue="CMake 应用程序.opengl_03" />
+      <item itemvalue="CMake 应用程序.opengl_04" />
     </list>
   </component>
   <component name="TaskManager">
@@ -173,7 +188,7 @@
       <workItem from="1756545773702" duration="20593000" />
       <workItem from="1756629312238" duration="16566000" />
       <workItem from="1756723334558" duration="11064000" />
-      <workItem from="1756806850269" duration="11200000" />
+      <workItem from="1756806850269" duration="24372000" />
     </task>
     <servers />
   </component>

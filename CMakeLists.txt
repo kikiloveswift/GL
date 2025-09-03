@@ -26,11 +26,16 @@ endfunction()
 add_executable(opengl_01 GettingStarted/opengl_01/opengl_01.cpp)
 add_executable(opengl_02 GettingStarted/opengl_02/opengl_02.cpp)
 add_executable(opengl_03 GettingStarted/opengl_03/opengl_03.cpp
-        GettingStarted/opengl_03/ImageLoader.cpp
-        GettingStarted/opengl_03/ImageLoader.h
+        Utils/ImageLoader.cpp
         Utils/Logger.cpp
-        Utils/Logger.h)
+)
+
+add_executable(opengl_04 GettingStarted/opengl_04/opengl_04.cpp
+        Utils/ImageLoader.cpp
+        Utils/Logger.cpp
+)
 
 link_renderer_libs(opengl_01)
 link_renderer_libs(opengl_02)
 link_renderer_libs(opengl_03)
+link_renderer_libs(opengl_04)
