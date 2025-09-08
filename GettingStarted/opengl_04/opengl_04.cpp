@@ -6,6 +6,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include <glm/gtc/quaternion.hpp>
 #include "../../Utils/Logger.h"
 #include "../../shader/Shader.h"
 #include "../../Utils/ImageLoader.h"
@@ -13,12 +14,19 @@
 int WINDOW_WIDTH = 800;
 int WINDOW_HEIGHT = 600;
 
-// 全局变量用于键盘输入控制
-float rotationX = 0.0f;
-float rotationY = 0.0f;
-float rotationSpeed = 2.0f;
+// 全局变量用于鼠标控制 - 使用四元数实现轨迹球旋转
+glm::quat currentRotation = glm::quat(1.0f, 0.0f, 0.0f, 0.0f); // 单位四元数
+float mouseSensitivity = 2.0f;
+
+// 鼠标状态变量
+bool mousePressed = false;
+float lastX = WINDOW_WIDTH / 2.0f;
+float lastY = WINDOW_HEIGHT / 2.0f;
 
 void processInput(GLFWwindow *window);
+void mouse_callback(GLFWwindow* window, double xpos, double ypos);
+void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
+glm::vec3 screenToSphere(float x, float y);
 
 int main(int argc, char *argv[]) {
     Logger::init();
@@ -41,6 +49,10 @@ int main(int argc, char *argv[]) {
         return -1;
     }
     glfwMakeContextCurrent(window);
+    
+    // 设置鼠标回调函数
+    glfwSetCursorPosCallback(window, mouse_callback);
+    glfwSetMouseButtonCallback(window, mouse_button_callback);
 
     // 2. Init glad
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
@@ -189,15 +201,14 @@ int main(int argc, char *argv[]) {
         shader.setInt("textures[4]", 4);
         shader.setInt("textures[5]", 5);
 
-        // 创建变换矩阵
+        // 创建变换矩阵 - 使用四元数
         glm::mat4 model = glm::mat4(1.0f);
-        model = glm::rotate(model, glm::radians(rotationX), glm::vec3(1.0f, 0.0f, 0.0f));
-        model = glm::rotate(model, glm::radians(rotationY), glm::vec3(0.0f, 1.0f, 0.0f));
+        model = model * glm::mat4_cast(currentRotation);
 
         glm::mat4 view = glm::mat4(1.0f);
         view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
 
-        glm::mat4 projection = glm::perspective(glm::radians(45.0f), 
+        glm::mat4 projection = glm::perspective(glm::radians(60.0f),
                                               (float)WINDOW_WIDTH / (float)WINDOW_HEIGHT, 
                                               0.1f, 100.0f);
 
@@ -228,14 +239,91 @@ int main(int argc, char *argv[]) {
 void processInput(GLFWwindow *window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
+}
+
+// 鼠标移动回调函数 - 轨迹球旋转
+void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
+    // 只有在鼠标按下时才处理旋转
+    if (!mousePressed) {
+        lastX = xpos;
+        lastY = ypos;
+        return;
+    }
+
+    // 将当前鼠标位置和上次位置都映射到单位球面
+    glm::vec3 currentPoint = screenToSphere(xpos, ypos);
+    glm::vec3 lastPoint = screenToSphere(lastX, lastY);
     
-    // WASD 控制旋转
-    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-        rotationX -= rotationSpeed; // 向上旋转
-    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-        rotationX += rotationSpeed; // 向下旋转
-    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-        rotationY -= rotationSpeed; // 向左旋转
-    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-        rotationY += rotationSpeed; // 向右旋转
+    // 计算旋转轴（两点的叉积）
+    glm::vec3 axis = glm::cross(lastPoint, currentPoint);
+    
+    // 如果轴长度很小，说明几乎没有移动
+    if (glm::length(axis) < 0.001f) {
+        lastX = xpos;
+        lastY = ypos;
+        return;
+    }
+    
+    // 归一化旋转轴
+    axis = glm::normalize(axis);
+    
+    // 计算旋转角度（两点的点积）
+    float angle = acos(glm::clamp(glm::dot(lastPoint, currentPoint), -1.0f, 1.0f));
+    
+    // 应用灵敏度
+    angle *= mouseSensitivity;
+    
+    // 创建旋转四元数
+    glm::quat rotation = glm::angleAxis(angle, axis);
+    
+    // 更新当前旋转（组合旋转）
+    currentRotation = rotation * currentRotation;
+    
+    // 归一化四元数避免累积误差
+    currentRotation = glm::normalize(currentRotation);
+    
+    lastX = xpos;
+    lastY = ypos;
+}
+
+// 鼠标按钮回调函数
+void mouse_button_callback(GLFWwindow* window, int button, int action, int mods) {
+    if (button == GLFW_MOUSE_BUTTON_LEFT) {
+        if (action == GLFW_PRESS) {
+            mousePressed = true;
+            // 获取当前鼠标位置
+            double xpos, ypos;
+            glfwGetCursorPos(window, &xpos, &ypos);
+            lastX = xpos;
+            lastY = ypos;
+        }
+        else if (action == GLFW_RELEASE) {
+            mousePressed = false;
+        }
+    }
+}
+
+// 将屏幕坐标映射到单位球面上（轨迹球算法核心）
+glm::vec3 screenToSphere(float x, float y) {
+    // 将屏幕坐标转换到[-1, 1]范围
+    float nx = (2.0f * x) / WINDOW_WIDTH - 1.0f;
+    float ny = 1.0f - (2.0f * y) / WINDOW_HEIGHT; // Y轴翻转
+    
+    float length2 = nx * nx + ny * ny;
+    
+    glm::vec3 point;
+    if (length2 <= 1.0f) {
+        // 点在球面内部，计算Z坐标
+        point.x = nx;
+        point.y = ny;
+        point.z = sqrt(1.0f - length2);
+    } else {
+        // 点在球面外部，投影到球面边缘
+        float length = sqrt(length2);
+        point.x = nx / length;
+        point.y = ny / length;
+        point.z = 0.0f;
+    }
+    
+    return glm::normalize(point);
 }

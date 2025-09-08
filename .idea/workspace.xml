@@ -31,15 +31,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="939d1074-ef3f-4adc-8a9f-a03fac7d5ae1" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/GettingStarted/opengl_04/opengl_04.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GettingStarted/opengl_04/opengl_04.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Gemini_Generated_Image_nxkhggnxkhggnxkh1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Gemini_Generated_Image_nxkhggnxkhggnxkh2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Gemini_Generated_Image_nxkhggnxkhggnxkh3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Gemini_Generated_Image_nxkhggnxkhggnxkh4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Gemini_Generated_Image_nxkhggnxkhggnxkh5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Gemini_Generated_Image_nxkhggnxkhggnxkh6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Gemini_Generated_Image_rks5ixrks5ixrks5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GettingStarted/opengl_04/opengl_04.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GettingStarted/opengl_04/opengl_04.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shader/Shader.h" beforeDir="false" afterPath="$PROJECT_DIR$/shader/Shader.h" afterDir="false" />
@@ -192,7 +183,7 @@
       <workItem from="1756723334558" duration="11064000" />
       <workItem from="1756806850269" duration="27061000" />
       <workItem from="1756952875580" duration="5674000" />
-      <workItem from="1757125000218" duration="13097000" />
+      <workItem from="1757125000218" duration="25215000" />
     </task>
     <servers />
   </component>
